@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+	<head>
+		<meta charset="utf-8">
+		<title>Quizcraft</title>
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+		<link href="https://fonts.googleapis.com/css?family=Gochi+Hand|Permanent+Marker&display=swap" rel="stylesheet">
+
+		<style media="screen">
+			img.resize{
+				max-width:3.5%;
+  				max-height:3.5%;
+
+			}
+			a{
+				font-family: 'Permanent Marker';
+
+			}
+			body {
+				background-image: url("background.jpg");
+ 				background-size: auto;
+			}
+
+			label{
+				font-family: 'Gochi Hand';
+				font-size: 140%;
+				color: #000000;
+			}
+
+
+		</style>
+	</head>
+	<body onload="init()">
+
+
+		<nav class="navbar navbar-expand-lg navbar-light " style="background-color: #B0E0E6;">
+
+		  <a class="navbar-brand" href="#">Quizcraft</a>
+
+
+
+		  	<div class="collapse navbar-collapse">
+
+			    <ul class="navbar-nav mr-auto">
+					<form class="form-inline" >
+  					 	<input id='username'  style="font-family: 'Gochi Hand'" class="form-control mr-sm-2" type="join" placeholder="Enter your gamertag..." aria-label="Search">
+
+						<div class="btn-group" role="group" >
+							<button  id="joinButton" style="font-family: 'Gochi Hand'" class="btn btn-outline-dark" type="button">Join the Fight!</button>
+
+
+						</div>
+
+				  	</form>
+
+			    </ul>
+
+
+  			</div>
+
+
+
+		</nav>
+		<div class="card  text-left">
+		  <div  style="font-family: 'Gochi Hand'" class="card-body">
+			<h5 class="card-title">Combatants!</h5>
+			<p class="card-text">
+				<ul id='scoreboard'  >
+					<li>False gamer</li>
+
+
+				</ul>
+
+			</p>
+
+		  </div>
+		</div>
+
+
+
+		<p id="testBlock"></p>
+		<p id='someButton'></p>
+		<p id='someButton2'></p>
+
+
+		<script src="/socket.io/socket.io.js"></script>
+		<script src="client-trivia.js"></script>
+
+	</body>
+
+</html>
